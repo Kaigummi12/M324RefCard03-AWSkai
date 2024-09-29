@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///Users/kaiwenninger/Desktop/m346-ref-card-02-main%202/.github/workflows/deploy.yml"
+    }
+}
