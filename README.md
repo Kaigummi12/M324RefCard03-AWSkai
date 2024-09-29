@@ -1,48 +1,56 @@
 
-# Architecture Ref.Card 02 - React Application (serverless)
+# CI-CD_GitHub_React_RefCard03-AWS von Kai Wenninger
 
-Link zur Übersicht<br/>
-https://gitlab.com/bbwrl/m346-ref-card-overview
+Als erstes habe ich das vorgegebene GitLab Repo geklont https://gitlab.com/bbwrl/m346-ref-card-02 und auf GitHub gepusht.
 
-## Installation der benötigten Werkzeuge
+![image](https://github.com/user-attachments/assets/394b2477-1dcf-42cb-b635-e7d07049b5cd)
 
-Für das Bauen der App wird Node bzw. npm benötigt. Die Tools sind unter 
-der folgenden URL zu finden. Für die meisten Benutzer:innen empfiehlt sich 
-die LTS Version.<br/>
-https://nodejs.org/en/download/
+Dann habe ich für die Konfiguration ein yml und ein Dockerfile hinzugefügt. Für die yml Datei habe ich ein Verzeichnis .github/workflows erstellt.
 
-Node Version Manager<br/>
-Für erfahren Benutzer:innen empfiehlt sich die Installation des 
-Node Version Manager nvm. Dieses Tool erlaubt das Installiert und das 
-Wechseln der Node Version über die Kommandozeile.<br/>
-**Achtung: Node darf noch nicht auf dem Computer installiert sein.**<br/>
-https://learn2torials.com/a/how-to-install-nvm
+Deploy.yml file:
+
+![image](https://github.com/user-attachments/assets/d46dbc2f-f6b5-4b98-b205-c1f77da74307)
+
+Dockerfile:
+
+![image](https://github.com/user-attachments/assets/c50565b0-5e2e-4752-9127-f8191b3d36b6)
+
+## Auf AWS ein ECR Repository erstellen
+
+Ich habe anschliessend ein Repo auf AWS erstellt.
+
+![image](https://github.com/user-attachments/assets/7d7b0a29-aa24-4e61-a2a9-5aaec86cae27)
+
+Und habe es folgerndermassen genannt.
+
+![image](https://github.com/user-attachments/assets/d59a0a74-6f38-4ebb-b6e2-dd2463ceb1c0)
+
+## Hinzufügen von Credentials auf GitHub bei GitHub Actions
+
+Als nächstes bin ich auf GitHub gegangen zu Setting -> Secrets and variables -> Actions
+
+![image](https://github.com/user-attachments/assets/2c19714c-cc56-4247-bd7c-387cf1eea68f)
+
+Dort habe ich dann neue Secret Repositories erstellt mit folgenden Umgebungsvariablen.
+
+![image](https://github.com/user-attachments/assets/8bc4a00d-29df-4f28-a95d-d6d9486550ae)
+
+Wichtig zu beachten ist, dass wen man das LearnerLab auf AWS neustartet werden neue credentials generiert und man muss sie anpassen. (z.B Session token)
+
+Nun habe ich den Build auf GitHub laufen gelassen und bei mir lief er erfolgreich durch. 
+
+![image](https://github.com/user-attachments/assets/931d398d-408e-4498-a5ab-48b13454a695)
+
+Ich habe ebenfalls überprüft, ob es auch auf AWS funktioniert hat. Dort sah ich auch das es erfolgreich geklappt hat.
+
+![image](https://github.com/user-attachments/assets/fa0ed294-d7b1-4c93-a76e-848333300ceb)
 
 
-## Inbetriebnahme auf eigenem Computer
-
-Projekt herunterladen<br/>
-```git clone git@gitlab.com:bbwrl/m346-ref-card-02.git```
-<br/>
-```cd architecture-refcard-02```
-
-### Projekt bauen und starten
-Die Ausführung der Befehle erfolgt im Projektordner
-
-Builden mit Node/npm<br/>
-```$ npm install```
-
-Das Projekt wird gebaut und die entsprechenden Dateien unter dem Ordner node_modules gespeichert.
-
-Die App kann nun mit folgendem Befehl gestartet werden<br/>
-```$ npm start```
-
-Die App kann nun im Browser unter der URL http://localhost:3000 betrachtet werden.
 
 
 
-### Inbetriebnahme mit Docker Container
-folgt...
+
+
 
 
 
