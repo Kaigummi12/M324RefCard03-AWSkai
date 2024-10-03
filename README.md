@@ -47,8 +47,14 @@ Ich habe ebenfalls überprüft, ob es auch auf AWS funktioniert hat. Dort sah ic
 
 ## Erweiterung mit ECS
 In meinem Projekt habe ich AWS so eingerichtet, dass bei jeder Änderung des Docker-Images automatisch ein neuer Container im Elastic Container Service (ECS) erstellt wird. ECS ermöglicht die einfache Verwaltung und Skalierung von containerisierten Anwendungen. Durch die Verwendung von ECS, ECR und einer CI/CD-Pipeline wird sichergestellt, dass stets die neueste Version der Anwendung ohne manuelle Eingriffe bereitgestellt wird.
+Nachdem ich ein Cluster erstellt habe, habe ich dort drin einen Service erstellt.
+
+<img width="1032" alt="image" src="https://github.com/user-attachments/assets/e54a6ca3-6078-4cc5-b226-ee0745e51b1b">
+
+
 
 <img width="1370" alt="image" src="https://github.com/user-attachments/assets/e3a0e287-04d7-471c-a83a-fcb296a45d13">
+
 
 
 Auf dem Bild sieht man das ich neben dem ECR auch noch ein ECS erstellt habe.
